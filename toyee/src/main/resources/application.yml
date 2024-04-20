@@ -1,15 +1,15 @@
 spring:
-  config:
-    activate:
-      on-profile: local
+#  config:
+#    activate:
+#      on-profile: local
   datasource:
-    #driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/toy?serverTimezone=UTC&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/toy?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
     username: root
     password: 1234
 
   jpa:
-    database: mysql
+#    database: mysql
     database-platform: org.hibernate.dialect.MySQL8Dialect
     properties:
       hibernate:
