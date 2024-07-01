@@ -21,7 +21,8 @@ public class MemberController {
 
     @GetMapping
     public ResponseEntity<Member> getMemberInfo(@RequestParam(value = "memberNum") Long memberNum) {
-        return new ResponseEntity<> (memberService.getMemberInfo(memberNum), HttpStatus.OK);
+        //return new ResponseEntity<> (memberService.getMemberInfo(memberNum), HttpStatus.OK);
+        return null;
     }
 
 }

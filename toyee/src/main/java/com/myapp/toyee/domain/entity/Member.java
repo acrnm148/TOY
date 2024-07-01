@@ -9,8 +9,19 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Getter
 @Builder
 @Entity
-@Table
+@Table(name = "member")
 @NoArgsConstructor
+@NamedQueries({
+        @NamedQuery(name = "Member.findAllByMemberNumAndMemberId",
+                query = "select m from Member m where m.memberNum=?1 and m.memberId=?2"),
+        @NamedQuery(name = "Member.findAllOrderByMemberNum",
+                query = "select m from Member m where memberId like '1342%' order by memberNum")
+})
+@NamedNativeQueries({
+        @NamedNativeQuery(name = "Member.findAllByMemberId"
+                , query = "select * from Member m where m.member_id = ?1"
+                ,resultClass = Member.class)
+})
 public class Member {
 
     @Id

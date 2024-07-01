@@ -1,8 +1,6 @@
 package com.myapp.toyee.Service;
 
 import com.myapp.toyee.domain.entity.Member;
-import com.myapp.toyee.domain.member.MemberDto;
-import com.myapp.toyee.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -14,17 +12,17 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class MemberService {
 
-    private final MemberRepository memberRepository;
+    /*private final MemberRepository memberRepository;
 
     public Member getMemberInfo(Long memberNum) {
         Optional<Member> optionalMember = memberRepository.findById(memberNum);
-        /*MemberDto memberDto = null;
+        *//*MemberDto memberDto = null;
         if (optionalMember.isPresent()) {
             Member member = optionalMember.get();
             //memberDto = member.
-        }*/
+        }*//*
         Member member = optionalMember.orElse(null);
         log.info("조회된 member:", member);
         return member;
-    }
+    }*/
 }
